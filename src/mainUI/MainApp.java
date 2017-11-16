@@ -19,19 +19,32 @@ public class MainApp {
 		int choice = 0;
 		Login li = new Login();
 		
-		while(choice!=3){
+		do {
 			System.out.println("-----------------------------------------------------------------------");
 			System.out.println("Welcome to MOvie Booking and LIsting Management Application (MOBLIMA)");
 			System.out.println("-----------------------------------------------------------------------");
 			System.out.println("");
-            System.out.println("(1) Log in");
-            System.out.println("(2) Create account");
-            System.out.println("(3) Exit");
-            System.out.println("");
-            System.out.println("Enter choice: ");
-            choice = sc.nextInt();
-            
-            switch(choice) {
+         		System.out.println("(1) Log in");
+			System.out.println("(2) Create account");
+			System.out.println("(3) Exit");
+			System.out.println("");
+			System.out.println("Enter choice: ");
+			
+			try 
+			{
+				choice = sc.nextInt();
+				if (choice != 1 && choice != 2 && choice != 3)
+				{
+					System.out.println("Invalid choice!");
+				}
+			}
+			catch (InputMismatchException e)
+			{
+				System.out.println("Please enter a choice from 1 - 3");
+				sc.nextLine();
+			}
+			
+			switch(choice) {
             		case 1:
             			li.logIn();
             			break;
@@ -41,9 +54,9 @@ public class MainApp {
             		case 3:
             			System.out.println("Goodbye!");
             			break;
-            			}
-            		}
+			}
 		}
+	}
 }
 
 	
