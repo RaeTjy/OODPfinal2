@@ -56,7 +56,7 @@ public class bookingHistory implements Serializable {
 	private String time;
 	
 	/**
-	 * Cost of Movie
+	 * Cost of Movie Booking
 	 */
 	private String cost;
 	
@@ -96,6 +96,20 @@ public class bookingHistory implements Serializable {
 	readWrite rw = new readWrite();
 	
 	public bookingHistory() {}
+	
+	/**
+	 * 
+	 * Creates a new Booking History Entry with the following parameters
+	 * @param u uniqueID of the User
+	 * @param t Transaction ID of the booking
+	 * @param mn Movie Title
+	 * @param cn Location of the Cineplex
+	 * @param cnum Cinema Number
+	 * @param d Date of the Movie
+	 * @param tim Time of the Movie
+	 * @param s Booked Seats
+	 * @param cos Cost of Booking
+	 */
 
 	public bookingHistory(String u, String t, String mn, String cn, String cnum, String d, String tim, String s, String cos )  {
 		uID = u;
